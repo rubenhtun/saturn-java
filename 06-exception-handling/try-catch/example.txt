@@ -1,0 +1,3 @@
+Welcome to Java File I/O!
+This file is used to demonstrate reading a file with try-catch and finally blocks.
+The program will read the first line and then close the file.
