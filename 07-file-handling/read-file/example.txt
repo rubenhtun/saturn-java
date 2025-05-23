@@ -1,4 +1,0 @@
-Welcome to Java file reading!
-This is an example text file.
-Each line will be read and printed by the Java program.
-Happy coding with Java!
