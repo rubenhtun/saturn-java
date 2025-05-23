@@ -22,7 +22,7 @@ public class App {
     // Main method: gets user input, processes it, and displays the result
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("Write a sentence to be reversed:");
+            System.out.print("Write a sentence to be reversed: ");
             String sentence = scanner.nextLine();
             String result = reverseSentence(sentence);
             System.out.println("Original sentence: " + sentence);
