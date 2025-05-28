@@ -1,18 +1,24 @@
-## Getting Started
+# 🌌 Saturn Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Welcome to **Saturn Java** — my personal space for exploring and building Java applications using Visual Studio Code.
 
-## Folder Structure
+## 🚀 Getting Started
 
-The workspace contains two folders by default, where:
+This project is set up for Java development in **VS Code**. Whether you're a beginner or brushing up your skills, this structure is ready to help you focus on writing clean Java code.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 📁 Folder Structure
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- `src/` – Java source files
+- `lib/` – Project dependencies
+- `bin/` – Compiled `.class` files (generated automatically)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> You can change the folder structure by editing `.vscode/settings.json`.
 
-## Dependency Management
+## 📦 Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Manage libraries and dependencies visually using the **JAVA PROJECTS** panel in VS Code.  
+Need help? [See this guide.](https://github.com/microsoft/vscode-java-dependency#manage-dependencies)
+
+---
+
+Happy coding with **Saturn Java** ☕🪐
