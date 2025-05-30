@@ -1,0 +1,30 @@
+Debugging Techniques for Logical Errors
+
+If the algorithm miscalculates the remaining budget, resulting in incorrect values, the following debugging techniques can be employed in Java to identify and rectify the issue:
+
+1. System.out.println for Variable Tracking:
+   - Add `System.out.println` statements to print intermediate values, such as `income`, `totalFixed`, `totalVariable`, and `remainingBudget`. For example, after calculating `totalFixed`, add `System.out.println("Debug: totalFixed = " + totalFixed);` to verify the summation.
+   - This helps identify if any expense category is incorrectly summed or if an input is misinterpreted.
+
+2. Input Validation Check:
+   - Verify that the `getPositiveDouble` method robustly handles invalid inputs (e.g., negative numbers, non-numeric inputs). A logical error might occur if the method fails to catch invalid inputs. Test with edge cases (e.g., entering letters or negative values) to ensure proper validation and exception handling.
+
+3. Debugger Usage:
+   - Use a Java debugger in an IDE like IntelliJ IDEA, Eclipse, or VS Code. Set breakpoints at key calculation points (e.g., summation of `totalFixed`, `totalVariable`, and `remainingBudget`). Step through the code to inspect variable values and ensure calculations are correct.
+
+4. Verify Summation Logic:
+   - Check the summation logic in `fixedExpenses.values().stream().mapToDouble(Double::doubleValue).sum()` and similarly for variable expenses. A logical error might occur if the stream misses entries or includes unexpected values. Test by entering duplicate categories in `getVariableExpenses` to ensure the `HashMap` handles overwrites correctly (e.g., only the last entry for a category is counted).
+
+5. Test with Known Values:
+   - Run the program with known inputs, such as an income of $1000, fixed expenses of $300 (Rent) and $100 (Utilities), and variable expenses of $200 (Groceries). The expected remaining budget should be $400. If the output is incorrect, trace the calculation steps to identify discrepancies.
+
+6. Check Conditional Logic:
+   - Inspect the budget status conditions (`if (remainingBudget > 0)`, etc.). Floating-point precision issues in Java could cause miscomparisons. For example, `remainingBudget` might be slightly off (e.g., 0.00001 instead of 0). Use `Math.round(remainingBudget * 100.0) / 100.0` for comparisons to avoid precision errors.
+
+7. Log User Inputs:
+   - Maintain a log of user inputs (e.g., write inputs to a file or store in a list) to review entered values. This helps identify if unexpected inputs (e.g., extremely large numbers or empty strings) cause miscalculations. For example, add `System.out.println("Input Log: " + category + " = " + amount);` in `getVariableExpenses`.
+
+By applying these debugging techniques, you can identify the source of logical errors—such as incorrect summations, input handling issues, or precision errors—and fix them by adjusting the code (e.g., enhancing input validation or handling duplicate categories). This Java program and debugging approach meet the assignment requirements, demonstrating algorithmic design, input management, conditional logic, iterative processes, and robust error handling.
+
+
+
