@@ -6,11 +6,19 @@ public class DecimalNumberReversal {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Can you prompt with any decimal number so I will reverse it: ");
-        String inputNum = scanner.next();
+        String input = scanner.next();
         scanner.close();
 
-        String reversedNumber = new StringBuilder(inputNum).reverse().toString();
+        int indexOfDecimalPoint = input.indexOf('.');
 
-        System.out.println("This is your reversed decimal number " + reversedNumber + ".");
+
+        String removedDot = input.replace(".", "");
+        String reversedDoubleWithoutDot = new StringBuilder(removedDot).reverse().toString();
+
+        String result = reversedDoubleWithoutDot.substring(0, indexOfDecimalPoint)
+                + "." + reversedDoubleWithoutDot.substring(indexOfDecimalPoint);
+
+        System.out.println("This is your reversed decimal number: " + result);
+
     }
 }
