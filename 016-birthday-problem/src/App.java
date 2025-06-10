@@ -1,22 +1,26 @@
 public class App {
     public static void main(String[] args) {
-        boolean[] used;
-        int count;
-        used = new boolean[365];
-        count = 0;
-        while(true) {
-            int birthday;
-            birthday = (int)(Math.random()*365);
-            count ++;
+        // Number of days per year
+        boolean[] used = new boolean[365];
+        // Count times to find the same number;
+        int count = 0;
 
-            if(used[birthday]) {
-                break;
+        // Harnessing While Loop for endless iteration
+        while (true) {
+            // Get a random birtday date
+            int birtday = (int)(Math.random()*365);
+            count++; // Increment of counting times
+
+            // Check if the same birthday has been found for another person
+            if(used[birtday]) {
+                break; // Stop the iteration
             }
-            used[birthday] =  true;
+
+            // If not, to make sure to record that birthday has already found
+            used[birtday] = true;
         }
 
-        System.out.println();
-        System.out.println("A duplicate birthday was found after " 
-                                             + count + " tries.");
+        // Show the result
+        System.out.println("\nThe next person who has same birthday has been found after " + count +" tries.");
     }
 }
