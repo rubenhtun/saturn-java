@@ -6,19 +6,20 @@ public class App {
         int count = 0; // Counter the number of values saved
         int num; // Number to be saved 
 
-        while (true) {
+        while (true) { // Pull numbers in an array
             System.out.print("Add a number: ");
             Scanner scanner = new Scanner(System.in);
             num = scanner.nextInt();
 
             if(num <= 0) {
-                break;
+                break; // An input value equal to zero marks the end of the data
             }
 
-            numbers[count] = num;
-            count++;
+            numbers[count] = num; // Insert value to the relevant index location
+            count++; // Increment count
         }
 
+        // Display final result
         System.out.println("The numbers in reverse order are:");
         for(int i = count - 1; i >= 0; i--) {
             System.out.println(numbers[i] + " is at the position of " + i + " of the array.");
